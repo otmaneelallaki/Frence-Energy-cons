@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pooch
 from fec.src.louad_db import url, path_target
+
 class Load:
     def __init__(self, url=url, target_name=path_target):
         path, fname = os.path.split(path_target)
