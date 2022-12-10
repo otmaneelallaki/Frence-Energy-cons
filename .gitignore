@@ -1,0 +1,14 @@
+__pycache__
+.vscode
+dist 
+
+*egg-info*
+
+.coverage
+*.csv
+*.pyc
+
+_build
+htmlcov
+
+script.py
