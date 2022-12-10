@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="fec",
+    name="fecDv",
     version='0.0.1',
     description="France energy prediction",
     url="https://github.com/otmaneelallaki/Frence-Energy-cons",
