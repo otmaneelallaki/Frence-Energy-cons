@@ -51,7 +51,12 @@ class Dos():
         
     def fitModel(self):
         """
-        Create time series features based on time series index.
+        This method is for the trining model part and saving it as tst file.
+
+        .. Note::
+            it takes about 1 minute to execute, it is recommended to use it once a year 
+            (whenever you see that's the forecasting is no longer gives a good result).
+            Then use **louad_mod()** method instead.
         """
         target = self.data.columns[self.energie]
         target_map = self.data[target].to_dict()
@@ -81,19 +86,18 @@ class Dos():
         return self.xgboost
 
     def louad_mod(self):
+        """ After the model was saved by calling **fitModel()** method, you have just call this method to relouad it again."""
         self.xgboost.load_model(path_target)
                 
     def DayPred(self):
         """
-        Predict confidence scores for samples.
-        The confidence score for a sample is proportional to the signed
-        distance of that sample to the hyperplane.
+        This method return to a DataFrame contains the date and hour of the day that we eant to forecast.
 
-        :param reg: this is the output of **fitModel** .
-        :type Year: xgboost.sklearn.XGBRegressor
+        :return: day_pred
+        :rtype: DataFrame  
 
-
-
+        :return: DayDate 
+        :rtype: DataFrame
         """
         liste = []
         for i in range(96):
@@ -127,7 +131,15 @@ class Dos():
         return day_pred, DayDate
 
     def plot(self, day_pred, DayDate):
-        """ This method plot daily energy predection indexing by Time """
+        """ This method plot daily energy predection indexing by Time 
+
+        :param day_pred: the out put of the **DayPred()** method
+        :type day_pred: DataFrame
+
+        :param DayDate: the out put of the **DayPred()** method
+        :type DayDate: DataFrame
+        """
+
         target = self.data.columns[self.energie]
 
         day_pred = day_pred[target].values

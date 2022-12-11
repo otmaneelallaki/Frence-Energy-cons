@@ -4,29 +4,17 @@ import numpy as np
 import pooch
 from fec.src.louad_db import url, path_target
 
-class Load:
-    def __init__(self, url=url, target_name=path_target):
-        path, fname = os.path.split(path_target)
-        pooch.retrieve(url, path=path, fname=fname, known_hash=None)
-
-    @staticmethod
-    def save_as_df():
-        df = pd.read_csv(
-            path_target,
-            na_values="",
-            low_memory=False,
-            converters={"data": str, "heure": str},
-        )
-        df.set_index("Time", inplace = True)
-        df.index = pd.to_datetime(df.index)
-        return df
-
 class Dawnload():
     """ 
     This class is for downloading  the data 
-    from `2012 into 2022 <https://bit.ly/3UyWiN4>`_  
-    and fil out all the missing values 
-    """
+    from `2012 up to now <https://bit.ly/3UyWiN4>`_  
+    and fil out all the missing values then it save is as a csv file in a folder called data.
+    
+    .. note::
+        
+        This methode takes almost 2 min to execute. You call it once a year tp update teh data,
+        then whenever  you want the data use the secend class below  **fec.src.louad_db.louad_db.Load()** 
+        """
 
     def __init__(self, data=pd.DataFrame()) -> None:
         """ 
@@ -36,7 +24,7 @@ class Dawnload():
 
     def dataDownload(self):
         """
-        This method is for download the data from 2019 to 2022 year by year.
+        This method is for download the data from 2019 up yo now year by year.
          """
         # loading raw data 2019
         url2019 = "https://bit.ly/3hVlwrl"
@@ -159,10 +147,10 @@ class Dawnload():
 
     def Filnan(self):
         """ 
-        In this Method we have fill the nan by the mean of two successive observation:
+        In this Method we have fill **nan** (missing values) by the mean of two successive observation:
 
         .. warning::
-            If you use **dataDownloadThis()** method then it's very important
+            If you use **dataDownload()** method then it's very important
             to call this method directly, otherwise you will get the data full of *nan*
             values.
             """ 
@@ -181,4 +169,25 @@ class Dawnload():
         self.data.to_csv(path_target)
 
 
+
+
+
+class Load:
+    """ Once you call **fec.src.louad_db.louad_db.Dawnload()** the data will be stocked in a folder in this package, This class is to relouad this data.  """
+    def __init__(self, url=url, target_name=path_target):
+        path, fname = os.path.split(path_target)
+        pooch.retrieve(url, path=path, fname=fname, known_hash=None)
+
+    @staticmethod
+    def save_as_df():
+        """ This method is read the data as csv file """
+        df = pd.read_csv(
+            path_target,
+            na_values="",
+            low_memory=False,
+            converters={"data": str, "heure": str},
+        )
+        df.set_index("Time", inplace = True)
+        df.index = pd.to_datetime(df.index)
+        return df
 
