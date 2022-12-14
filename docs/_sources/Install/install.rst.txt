@@ -1,0 +1,7 @@
+Installation:
+=============
+
+to install The France Energy Consumption use:
+
+::
+    $ pip install fecdv

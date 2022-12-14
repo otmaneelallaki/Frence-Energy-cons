@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fec.src.xgboost package &mdash; France Energy Consumption 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fec.src.louad_db package" href="Louaddata.html" />
+    <link rel="prev" title="Welcome to France Energy Consumption’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> France Energy Consumption
+            <img src="../_static/logo.jpeg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Predection, Data Collection</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">fec.src.xgboost package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-fec.src.xgboost.xgboost">fec.src.xgboost.xgboost module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Louaddata.html">fec.src.louad_db package</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Install/install.html">Installation:</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Example</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/exam.html">Examples of ClassModel</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">France Energy Consumption</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">fec.src.xgboost package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/prediction/pred.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fec-src-xgboost-package">
+<h1>fec.src.xgboost package<a class="headerlink" href="#fec-src-xgboost-package" title="Permalink to this headline"></a></h1>
+<p>In this part we are going to document a half part of the Project wiches the Prediction or three sources of energy:</p>
+<section id="module-fec.src.xgboost.xgboost">
+<span id="fec-src-xgboost-xgboost-module"></span><h2>fec.src.xgboost.xgboost module<a class="headerlink" href="#module-fec.src.xgboost.xgboost" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fec.src.xgboost.xgboost.Dos">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fec.src.xgboost.xgboost.</span></span><span class="sig-name descname"><span class="pre">Dos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">day</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fec/src/xgboost/xgboost.html#Dos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fec.src.xgboost.xgboost.Dos" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class Dos is  a class that could daily predect and plot three sources
+of three sources of enrergy: Electricity Consumption, Gaz and Nuclear.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>Dataframe</em>) – This is the data training, it is the output of <a class="reference internal" href="Louaddata.html#datacol"><span class="std std-ref">Data Collection</span></a>.</p></li>
+<li><p><strong>energy</strong> (<em>int</em>) – This model predict three sources of energy: Electricity Consumption, Gaz and Nuclear.
+0 : Electricity Consumption
+1 : Gaz
+2: Nuclear</p></li>
+<li><p><strong>Year</strong> (<em>int</em>) – The Year for which day we want to predict.</p></li>
+<li><p><strong>month</strong> (<em>int</em>) – The month for which day we want to predict.</p></li>
+<li><p><strong>day</strong> (<em>int</em>) – The day for which day we want to predict.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fec.src.xgboost.xgboost.Dos.fitModel">
+<span class="sig-name descname"><span class="pre">fitModel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fec/src/xgboost/xgboost.html#Dos.fitModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fec.src.xgboost.xgboost.Dos.fitModel" title="Permalink to this definition"></a></dt>
+<dd><p>This method is for the trining model part and saving it as tst file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>it takes about 1 minute to execute, it is recommended to use it once a year
+(whenever you see that’s the forecasting is no longer gives a good result).
+Then use <strong>louad_mod()</strong> method instead.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fec.src.xgboost.xgboost.Dos.louad_mod">
+<span class="sig-name descname"><span class="pre">louad_mod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fec/src/xgboost/xgboost.html#Dos.louad_mod"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fec.src.xgboost.xgboost.Dos.louad_mod" title="Permalink to this definition"></a></dt>
+<dd><p>After the model was saved by calling <strong>fitModel()</strong> method, you have just call this method to relouad it again.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fec.src.xgboost.xgboost.Dos.DayPred">
+<span class="sig-name descname"><span class="pre">DayPred</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fec/src/xgboost/xgboost.html#Dos.DayPred"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fec.src.xgboost.xgboost.Dos.DayPred" title="Permalink to this definition"></a></dt>
+<dd><p>This method return to a DataFrame contains the date and hour of the day that we eant to forecast.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>day_pred</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DayDate</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fec.src.xgboost.xgboost.Dos.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">day_pred</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DayDate</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fec/src/xgboost/xgboost.html#Dos.plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fec.src.xgboost.xgboost.Dos.plot" title="Permalink to this definition"></a></dt>
+<dd><p>This method plot daily energy predection indexing by Time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>day_pred</strong> (<em>DataFrame</em>) – the out put of the <strong>DayPred()</strong> method</p></li>
+<li><p><strong>DayDate</strong> (<em>DataFrame</em>) – the out put of the <strong>DayPred()</strong> method</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to France Energy Consumption’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Louaddata.html" class="btn btn-neutral float-right" title="fec.src.louad_db package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Otmane, David, Sofian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

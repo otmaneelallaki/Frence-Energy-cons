@@ -1,0 +1,13 @@
+fec.src.xgboost package
+=======================
+
+In this part we are going to document a half part of the Project wiches the Prediction or three sources of energy:
+
+fec.src.xgboost.xgboost module
+------------------------------
+
+.. automodule:: fec.src.xgboost.xgboost
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource

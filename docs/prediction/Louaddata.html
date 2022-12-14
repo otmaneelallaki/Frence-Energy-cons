@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fec.src.louad_db package &mdash; France Energy Consumption 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installation:" href="../Install/install.html" />
+    <link rel="prev" title="fec.src.xgboost package" href="pred.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> France Energy Consumption
+            <img src="../_static/logo.jpeg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Predection, Data Collection</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pred.html">fec.src.xgboost package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">fec.src.louad_db package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-fec.src.louad_db.louad_db">fec.src.louad_db.louad_db module</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Install/install.html">Installation:</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Example</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/exam.html">Examples of ClassModel</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">France Energy Consumption</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">fec.src.louad_db package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/prediction/Louaddata.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fec-src-louad-db-package">
+<h1>fec.src.louad_db package<a class="headerlink" href="#fec-src-louad-db-package" title="Permalink to this headline"></a></h1>
+<section id="module-fec.src.louad_db.louad_db">
+<span id="fec-src-louad-db-louad-db-module"></span><h2>fec.src.louad_db.louad_db module<a class="headerlink" href="#module-fec.src.louad_db.louad_db" title="Permalink to this headline"></a></h2>
+<span class="target" id="datacol"></span><dl class="py class">
+<dt class="sig sig-object py" id="fec.src.louad_db.louad_db.Dawnload">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fec.src.louad_db.louad_db.</span></span><span class="sig-name descname"><span class="pre">Dawnload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data=Empty</span> <span class="pre">DataFrame</span> <span class="pre">Columns:</span> <span class="pre">[]</span> <span class="pre">Index:</span> <span class="pre">[]</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fec/src/louad_db/louad_db.html#Dawnload"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fec.src.louad_db.louad_db.Dawnload" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is for downloading  the data
+from <a class="reference external" href="https://bit.ly/3UyWiN4">2012 up to now</a>
+and fil out all the missing values then it save is as a csv file in a folder called data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This methode takes almost 2 min to execute. You call it once a year tp update teh data,
+then whenever  you want the data use the secend class below  <strong>fec.src.louad_db.louad_db.Load()</strong></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="fec.src.louad_db.louad_db.Dawnload.dataDownload">
+<span class="sig-name descname"><span class="pre">dataDownload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fec/src/louad_db/louad_db.html#Dawnload.dataDownload"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fec.src.louad_db.louad_db.Dawnload.dataDownload" title="Permalink to this definition"></a></dt>
+<dd><p>This method is for download the data from 2019 up yo now year by year.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fec.src.louad_db.louad_db.Dawnload.Filnan">
+<span class="sig-name descname"><span class="pre">Filnan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fec/src/louad_db/louad_db.html#Dawnload.Filnan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fec.src.louad_db.louad_db.Dawnload.Filnan" title="Permalink to this definition"></a></dt>
+<dd><p>In this Method we have fill <strong>nan</strong> (missing values) by the mean of two successive observation:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you use <strong>dataDownload()</strong> method then it’s very important
+to call this method directly, otherwise you will get the data full of <em>nan</em>
+values.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fec.src.louad_db.louad_db.Load">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fec.src.louad_db.louad_db.</span></span><span class="sig-name descname"><span class="pre">Load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://github.com/otmaneelallaki/Frence-Energy-cons/raw/master/fec/src/data/DataTrining.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/mac/Desktop/Github/Frence-Energy-cons/fec/src/louad_db/../data/DataTrining.csv'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fec/src/louad_db/louad_db.html#Load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fec.src.louad_db.louad_db.Load" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Once you call <strong>fec.src.louad_db.louad_db.Dawnload()</strong> the data will be stocked in a folder in this package, This class is to relouad this data.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fec.src.louad_db.louad_db.Load.save_as_df">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">save_as_df</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fec/src/louad_db/louad_db.html#Load.save_as_df"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fec.src.louad_db.louad_db.Load.save_as_df" title="Permalink to this definition"></a></dt>
+<dd><p>This method is read the data as csv file</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pred.html" class="btn btn-neutral float-left" title="fec.src.xgboost package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Install/install.html" class="btn btn-neutral float-right" title="Installation:" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Otmane, David, Sofian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

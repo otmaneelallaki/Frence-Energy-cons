@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples of ClassModel &mdash; France Energy Consumption 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Installation:" href="../Install/install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> France Energy Consumption
+            <img src="../_static/logo.jpeg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Predection, Data Collection</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prediction/pred.html">fec.src.xgboost package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prediction/Louaddata.html">fec.src.louad_db package</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Install/install.html">Installation:</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Example</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples of ClassModel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-impodtation-of-the-package">The Impodtation of the Package:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#louad-the-data">Louad the data:</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">France Energy Consumption</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Examples of ClassModel</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Examples/exam.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="examples-of-classmodel">
+<h1>Examples of ClassModel<a class="headerlink" href="#examples-of-classmodel" title="Permalink to this headline"></a></h1>
+<p>Here an example of how we cloud use the fec’s package:</p>
+<section id="the-impodtation-of-the-package">
+<h2>The Impodtation of the Package:<a class="headerlink" href="#the-impodtation-of-the-package" title="Permalink to this headline"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">fec</span>
+</pre></div>
+</div>
+</section>
+<section id="louad-the-data">
+<h2>Louad the data:<a class="headerlink" href="#louad-the-data" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span> <span class="o">=</span> <span class="n">fec</span><span class="o">.</span><span class="n">Load</span><span class="p">()</span><span class="o">.</span><span class="n">save_as_df</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span>
+<span class="go">                     Consommation (MW)  Gaz (MW)  Nucléaire (MW)</span>
+<span class="go">Time</span>
+<span class="go">2019-01-01 00:00:00            64207.0    3430.0         55577.0</span>
+<span class="go">2019-01-01 00:15:00            63684.5    3229.5         55894.0</span>
+<span class="go">2019-01-01 00:30:00            63162.0    3029.0         56211.0</span>
+<span class="go">2019-01-01 00:45:00            62042.5    2943.5         55625.0</span>
+<span class="go">2019-01-01 01:00:00            60923.0    2858.0         55039.0</span>
+<span class="gp">... </span>                               <span class="o">...</span>       <span class="o">...</span>             <span class="o">...</span>
+<span class="go">2022-12-10 00:45:00            61782.0    7359.0         39127.0</span>
+<span class="go">2022-12-10 01:00:00            61227.0    7337.0         39133.0</span>
+<span class="go">2022-12-10 01:15:00            61677.0    7633.0         39091.0</span>
+<span class="go">2022-12-10 01:30:00            61311.0    7407.0         38962.0</span>
+<span class="go">2022-12-10 01:45:00            61311.0    7601.0         39053.0</span>
+</pre></div>
+</div>
+<p>[138152 rows x 3 columns]</p>
+</div></blockquote>
+<p>Calling the Dos class method, setting 0 as parametres to predict the Electricity Consommation</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">fec</span><span class="o">.</span><span class="n">Dos</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2022</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Fiting and save the model by calling the class <strong>fitModel()</strong></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span><span class="o">.</span><span class="n">fitModel</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command takes 1 min,it is recommended to use it once then use <strong>model.louad_mod()</strong></p>
+</div>
+<dl>
+<dt>Prediction day :</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pred</span><span class="p">,</span> <span class="n">date</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">DayPred</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred</span>
+<span class="go">          Date  Heure  Consommation (MW)</span>
+<span class="go">0   2022-12-08  00:00       63262.738281</span>
+<span class="go">1   2022-12-08  00:15       62592.929688</span>
+<span class="go">2   2022-12-08  00:30       60472.773438</span>
+<span class="go">3   2022-12-08  00:45       59486.679688</span>
+<span class="go">4   2022-12-08  01:00       59045.269531</span>
+<span class="go">..         ...    ...                ...</span>
+<span class="go">91  2022-12-08  22:45       65644.039062</span>
+<span class="go">92  2022-12-08  23:00       65423.988281</span>
+<span class="go">93  2022-12-08  23:15       65242.585938</span>
+<span class="go">94  2022-12-08  23:30       65242.585938</span>
+<span class="go">95  2022-12-08  23:45       65105.898438</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>[96 rows x 3 columns]</p>
+<p>Ploting the forecasting day</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<a class="with-shadow reference internal image-reference" href="../_images/Figure_1.pdf"><img alt="Chart" class="with-shadow" src="../_images/Figure_1.pdf" style="width: 665.0px; height: 332.5px;" /></a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>whenever you want to have data up to date please use this code bellow:</p>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">fec</span><span class="o">.</span><span class="n">Dawnload</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">dataDownload</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">Filnan</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Install/install.html" class="btn btn-neutral float-left" title="Installation:" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Otmane, David, Sofian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

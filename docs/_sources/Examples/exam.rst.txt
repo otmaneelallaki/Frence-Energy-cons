@@ -1,0 +1,85 @@
+Examples of ClassModel
+======================
+
+Here an example of how we cloud use the fec's package:
+
+The Impodtation of the Package:
+------------------------------- 
+
+
+    >>> import fec
+
+Louad the data:
+---------------
+
+
+    >>> df = df = fec.Load().save_as_df()
+    >>> df
+                         Consommation (MW)  Gaz (MW)  Nucléaire (MW)
+    Time                                                            
+    2019-01-01 00:00:00            64207.0    3430.0         55577.0
+    2019-01-01 00:15:00            63684.5    3229.5         55894.0
+    2019-01-01 00:30:00            63162.0    3029.0         56211.0
+    2019-01-01 00:45:00            62042.5    2943.5         55625.0
+    2019-01-01 01:00:00            60923.0    2858.0         55039.0
+    ...                                ...       ...             ...
+    2022-12-10 00:45:00            61782.0    7359.0         39127.0
+    2022-12-10 01:00:00            61227.0    7337.0         39133.0
+    2022-12-10 01:15:00            61677.0    7633.0         39091.0
+    2022-12-10 01:30:00            61311.0    7407.0         38962.0
+    2022-12-10 01:45:00            61311.0    7601.0         39053.0
+
+    [138152 rows x 3 columns]
+
+Calling the Dos class method, setting 0 as parametres to predict the Electricity Consommation
+
+
+>>> model = fec.Dos(df, 0, 2022, 12, 8)
+
+Fiting and save the model by calling the class **fitModel()** 
+
+
+
+
+>>> model.fitModel()  
+
+.. note::
+    This command takes 1 min,it is recommended to use it once then use **model.louad_mod()**
+
+Prediction day :
+    >>> pred, date = model.DayPred() 
+    >>> pred
+              Date  Heure  Consommation (MW)
+    0   2022-12-08  00:00       63262.738281
+    1   2022-12-08  00:15       62592.929688
+    2   2022-12-08  00:30       60472.773438
+    3   2022-12-08  00:45       59486.679688
+    4   2022-12-08  01:00       59045.269531
+    ..         ...    ...                ...
+    91  2022-12-08  22:45       65644.039062
+    92  2022-12-08  23:00       65423.988281
+    93  2022-12-08  23:15       65242.585938
+    94  2022-12-08  23:30       65242.585938
+    95  2022-12-08  23:45       65105.898438
+
+[96 rows x 3 columns]
+
+Ploting the forecasting day
+    
+>>> model.plot(pred, date)
+
+.. figure:: ./Figure_1.pdf
+   :height: 350
+   :width: 700
+   :scale: 95
+   :align: center
+   :class: with-shadow
+   :alt: Chart
+
+.. note::
+    
+    whenever you want to have data up to date please use this code bellow:
+
+>>> df = fec.Dawnload()
+>>> df.dataDownload()
+>>> df.Filnan()
