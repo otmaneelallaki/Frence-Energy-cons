@@ -5,6 +5,10 @@ This project aims to : <br/>
 
 -Create  a python package allowing any user to predict for a desired day different sources of energy consumption in France. <br/>
 
+### Documentation
+
+link : https://otmaneelallaki.github.io/Frence-Energy-cons/
+
 ### Usage
 
 - Just install the package `pip install fecdv`
