@@ -12,7 +12,7 @@ link : https://otmaneelallaki.github.io/Frence-Energy-cons/
 ### Usage
 
 - Just install the package `pip install fecdv`
-- Import it to you project `import fec` and use as you want😊
+- Import it to your project `import fec` and use as you want😊
 
 ### Install
 
